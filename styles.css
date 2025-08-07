@@ -1,0 +1,381 @@
+/*website css*/
+
+/*Hyperparameters*/
+:root {
+
+    /*Set 1*/
+    --color1: blue;     
+    --color2: #9bccfd;
+    --color3: #36e6d7;
+    --color4: #b1599f;
+    /*blue, sky blue, turquoise, sky violet*/
+
+
+    /*Set 2*/
+    /* --color1: #353d61;
+    --color2: #39c3e7;
+    --color3: #ebe4d2;
+    --color4: #ff6855; */
+    /*dark blue, light blue, peach?, orange*/
+
+    /*Set 3*/
+    /* --color1: #fb493d;
+    --color2: #282b3a;
+    --color3: #d7dfe2;
+    --color4: #ffbf25; */
+    /*orange, black, grey, yellow*/
+
+
+    /*Set 4*/
+    /* --color1: blue;
+    --color2: lightgreen;
+    --color3: orange;
+    --color4: red; */
+
+
+    /*Set 5*/
+    /* --color1: blue;
+    --color2: yellow;
+    --color3: orange;
+    --color4: violet; */
+
+
+    /*Set 6*/
+    /* --color1: green;
+    --color2: orange;
+    --color3: red;
+    --color4: blueviolet; */
+}
+
+/************************************************************/
+
+/*Details for entire page*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color2);
+    color: black;
+}
+
+
+/************************************************************/
+/*Header Arrangement*/
+
+
+/*Top header before "Welcome to Jopara"*/
+header {
+    background-color: var(--color1);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /*bottom only if you want header to stay on screen*/
+    /* position: sticky;
+    top: 0; */
+
+    /*not needed, for now*/
+    /* z-index: 1000; */
+}
+
+
+/************************************************************/
+/*Flags*/
+
+
+/*Flags arrangement*/
+.flags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 3px;
+}
+
+/*Borders of flags*/
+.flags > *{
+    /* border: 5px solid black; */
+    border: 5px solid var(--color3);
+    height: 12vw;
+    width: 21vw;
+    /*max-width/height, if necesary*/
+}
+
+/*Flag images themselves*/
+#usflag, #pyflag{
+    height: 12vw;
+    width: 21vw;
+    /*max-width/height, if necesary*/
+}
+
+
+
+
+/************************************************************/
+/*Header details*/
+
+
+/*"Jopara Paraguay" text*/
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/*"Peace Corps - .." text*/
+header h2{
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/************************************************************/
+/*Dropdown details*/
+
+/*Arrangement for all 3 dropdowns as a bulk*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+/*Arrangement for dropdown itself*/
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/*Details of all <a> inside dropdowns
+    including "English, Span.."*/
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    /* font-size: 1.25em; */
+}
+
+/*Action of hovering over texts in dropdowns*/
+nav ul li a:hover {
+    text-decoration: underline;
+}
+ 
+/*Details of "English,Span..." text*/
+.eng-dropdown, .spa-dropdown, .gua-dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;    
+} 
+
+
+
+
+
+
+
+
+
+
+/*English dropdown arrangment*/
+nav ul li.eng-dropdown .eng-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 8px 16px var(--color4);
+    z-index: 1;
+}
+
+/*Spanish dropdown arrangment*/
+nav ul li.spa-dropdown .spa-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 8px 16px var(--color4);
+    z-index: 1;
+}
+
+/*Guarani dropdown arrangment*/
+nav ul li.gua-dropdown .gua-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 8px 16px var(--color4);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Details of text inside "English" dropdown*/
+nav ul li.eng-dropdown .eng-dropdown-content a {
+    /* color: #00695c; */
+    color :var(--color3);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Details of text inside "English" dropdown, 
+    when hovered over EACH text*/
+nav ul li.eng-dropdown .eng-dropdown-content a:hover{
+    /* background-color: white; */
+    background-color: var(--color4);
+}
+
+/*Details of action when hover over "English"*/
+nav ul li.eng-dropdown:hover .eng-dropdown-content {
+    display: block;
+    /* background-color: var(--color4); */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Details of text inside "Spanish" dropdown*/
+nav ul li.spa-dropdown .spa-dropdown-content a {
+    /* color: #00695c; */
+    color :var(--color3);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Details of text inside "Spanish" dropdown, 
+    when hovered over EACH text*/
+nav ul li.spa-dropdown .spa-dropdown-content a:hover{
+    /* background-color: white; */
+    background-color: var(--color4);
+}
+
+/*Details of action when hover over "Spanish"*/
+nav ul li.spa-dropdown:hover .spa-dropdown-content {
+    display: block;
+    /* background-color: var(--color4); */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Details of text inside "Guarani" dropdown*/
+nav ul li.gua-dropdown .gua-dropdown-content a {
+    /* color: #00695c; */
+    color :var(--color3);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Details of text inside "Guarani" dropdown, 
+    when hovered over EACH text*/
+nav ul li.gua-dropdown .gua-dropdown-content a:hover{
+    /* background-color: white; */
+    background-color: var(--color4);
+}
+
+/*Details of action when hover over "Guarani"*/
+nav ul li.gua-dropdown:hover .gua-dropdown-content {
+    display: block;
+    /* background-color: var(--color4); */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************/
+/*main body*/
+
+
+
+/*Details of body in general*/
+main {
+    padding: 40px 20px;
+}
+
+/*Details of each section/"Block" in body*/
+section {
+    margin-bottom: 40px;
+    /* background: white; */
+    background: var(--color3);
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px var(--color4);
+}
+
+
+/*Adding spacing to changes in language*/
+#spanish-content, #guarani-content{
+    margin-top: 200px;
+}
+
+/*DEtails of all "welcomes" in all languageS*/
+section h2 {
+    color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+
+
+
+/************************************************************/
+/*Footer*/
+footer {
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
